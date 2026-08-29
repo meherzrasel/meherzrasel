@@ -86,11 +86,18 @@ nav, main, footer{
       } </style>
 </head>
 <body>
+  <audio id="bgMusic" loop>
+  <source src="background-music.mp3" type="audio/mpeg">
+  </audio>
 
     <!-- Background Video -->
     <video class="background-video" autoplay muted loop playsinline>
         <source src="background.mp4" type="video/mp4">
     </video>
+  <!-- Background Music -->
+<audio id="bgMusic" autoplay loop>
+    <source src="background-music.mp3" type="audio/mpeg">
+</audio>
 <nav>
   <div class="wrap navin">
     <a class="brand" href="#home">Meherz<span>R</span>asel</a>
@@ -212,6 +219,12 @@ nav, main, footer{
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
+<script>
+const music = document.getElementById("bgMusic");
 
+document.addEventListener("click", function () {
+  music.play().catch(() => {});
+}, { once: true });
+</script>
 </body>
 </html>
