@@ -83,7 +83,25 @@ body{
 nav, main, footer{
     position:relative;
     z-index:1;
-      } </style>
+      } 
+  .whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  </style>
 </head>
 <body>
   <audio id="bgMusic" loop>
@@ -242,5 +260,12 @@ document.addEventListener("click", function () {
   music.play().catch(() => {});
 }, { once: true });
 </script>
+<a href="https://wa.me/8801980816673" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="WhatsApp">
+    💬
+</a>
+
 </body>
 </html>
